@@ -15,7 +15,7 @@ Platform assembly: C:\Users\Glenn\Documents\MFPS\Builds\MFPS_Data\Managed\Assemb
 Loading C:\Users\Glenn\Documents\MFPS\Builds\MFPS_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
 Platform assembly: C:\Users\Glenn\Documents\MFPS\Builds\MFPS_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading C:\Users\Glenn\Documents\MFPS\Builds\MFPS_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.136 seconds
+- Completed reload, in  0.145 seconds
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -33,3 +33,4 @@ Joined room
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
 
+Platform assembly: C:\Users\Glenn\Documents\MFPS\Builds\MFPS_Data\Managed\Boo.Lang.dll (this message is harmless)

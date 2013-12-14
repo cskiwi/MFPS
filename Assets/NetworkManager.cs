@@ -39,12 +39,16 @@ public class NetworkManager : MonoBehaviour {
 
 	void SpawnMyPlayer(){
 		if (_spawnSpots == null){
-			Debug.LogError("Dafuq? no spawn spots");
+			Debug.LogError("Dafuq? no spawn spots?");
 			return;
 		}
 
 		SpawnSpot mySpawnSpot = _spawnSpots[Random.Range(0, _spawnSpots.Length)];
-		PhotonNetwork.Instantiate("PlayerController", mySpawnSpot.transform.position, mySpawnSpot.transform.rotation, 0);
+		GameObject myPlayer = (GameObject) PhotonNetwork.Instantiate("PlayerController", mySpawnSpot.transform.position, mySpawnSpot.transform.rotation, 0);
 		standByCamera.enabled = false;
+		
+		((MonoBehaviour)myPlayer.GetComponent("FPSInputController")).enabled = true;
+		((MonoBehaviour)myPlayer.GetComponent("MouseLook")).enabled = true;
+		myPlayer.transform.FindChild("Main Camera").gameObject.SetActive(true);
 	}
 }
