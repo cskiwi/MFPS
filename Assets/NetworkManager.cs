@@ -4,9 +4,12 @@ using System.Collections;
 public class NetworkManager : MonoBehaviour {
 
 	public Camera standByCamera;
+	SpawnSpot[] _spawnSpots;
+	
 
-	// Use this for initialization
+	// Use this for in	itialization
 	void Start () {
+		_spawnSpots = GameObject.FindObjectsOfType<SpawnSpot>();
 		Connect();
 	}
 	void  Connect() {
@@ -35,7 +38,13 @@ public class NetworkManager : MonoBehaviour {
 	}
 
 	void SpawnMyPlayer(){
-		PhotonNetwork.Instantiate("PlayerController", Vector3.zero, Quaternion.identity, 0);
+		if (_spawnSpots == null){
+			Debug.LogError("Dafuq? no spawn spots");
+			return;
+		}
+
+		SpawnSpot mySpawnSpot = _spawnSpots[Random.Range(0, _spawnSpots.Length)];
+		PhotonNetwork.Instantiate("PlayerController", mySpawnSpot.transform.position, mySpawnSpot.transform.rotation, 0);
 		standByCamera.enabled = false;
 	}
 }
