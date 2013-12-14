@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\NetworkManager.cs">
     <Files>
-      <File FileName="Assets\NetworkManager.cs" Line="37" Column="23" />
+      <File FileName="Assets\NetworkManager.cs" Line="45" Column="3" />
+      <File FileName="Assets\SpawnSpot.cs" Line="8" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
